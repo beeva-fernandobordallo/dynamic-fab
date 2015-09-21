@@ -1,0 +1,38 @@
+{
+  "name": "dynamic-fab",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "dynamic-fab.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "neon-animation": "PolymerElements/neon-animation#~1.0.6",
+    "paper-fab": "PolymerElements/paper-fab#~1.0.4",
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "faba758316",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "faba758316109c28f97342b2d01fd902a466ece9"
+  },
+  "_source": "git://github.com/beeva-fernandobordallo/dynamic-fab.git",
+  "_target": "master",
+  "_originalSource": "beeva-fernandobordallo/dynamic-fab",
+  "_direct": true
+}
