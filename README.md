@@ -2,6 +2,9 @@
 
 An element providing a starting point for your own reusable Polymer elements.
 
+# DEMO PAGE
+
+http://beeva-fernandobordallo.github.io/dynamic-fab/
 
 ## Dependencies
 
