@@ -54,16 +54,27 @@ Example:
       width:20px;
       height:20px;
       z-index: 4;
+      --paper-fab-background: var(--dynamic-fab-one-background);
       position: relative;
+    }
+  
+    #secondaryone{
       top: -35px;
-      --paper-fab-background: blue;
+    }
+    #secondarytwo{
+      top: -70px;
+    }
+    #secondarythree{
+      top: -105px;
     }
   </style>
 
   <template>
     <div class="layout vertical center">
       <paper-fab id="mainbutton" class="primary-button" icon="more-vert" on-tap="animate"></paper-fab>
-      <paper-fab id="secondaryone" class="secondary-button" icon="add"></paper-fab>
+      <paper-fab id="secondaryone" class="secondary-button" icon="arrow-back"></paper-fab>
+      <paper-fab id="secondarytwo" class="secondary-button" icon="attachment"></paper-fab>
+      <paper-fab id="secondarythree" class="secondary-button" icon="bookmark-border"></paper-fab>
     </div>
     <div>
       <p>{{_state}}</p>
@@ -102,7 +113,17 @@ Example:
               name: 'transform-animation',
               node: this.$.secondaryone,
               transformFrom: 'translate(0,0)',
-              transformTo: 'translate(0,50px)'
+              transformTo: 'translate(0,40px)'
+            },{
+              name: 'transform-animation',
+              node: this.$.secondarytwo,
+              transformFrom: 'translate(0,0)',
+              transformTo: 'translate(0,80px)'
+            },{
+              name: 'transform-animation',
+              node: this.$.secondarythree,
+              transformFrom: 'translate(0,0)',
+              transformTo: 'translate(0,120px)'
             },
             {
               name: 'transform-animation',
@@ -114,7 +135,17 @@ Example:
             exit: [{
               name: 'transform-animation',
               node: this.$.secondaryone,
-              transformFrom: 'translate(0,50px)',
+              transformFrom: 'translate(0,40px)',
+              transformTo: 'translate(0,0)'
+            },{
+              name: 'transform-animation',
+              node: this.$.secondarytwo,
+              transformFrom: 'translate(0,80px)',
+              transformTo: 'translate(0,0)'
+            },{
+              name: 'transform-animation',
+              node: this.$.secondarythree,
+              transformFrom: 'translate(0,120px)',
               transformTo: 'translate(0,0)'
             },
             {
@@ -181,9 +212,13 @@ Example:
 
     _onAnimationFinish: function(){
       if(this._state){
-        this.$.secondaryone.style.transform = 'translateY(50px)';
+        this.$.secondaryone.style.transform = 'translateY(40px)';
+        this.$.secondarytwo.style.transform = 'translateY(80px)';
+        this.$.secondarythree.style.transform = 'translateY(120px)';
       } else if (!this._state) {
         this.$.secondaryone.style.transform = 'translateY(0)';
+        this.$.secondarytwo.style.transform = 'translateY(0)';
+        this.$.secondarythree.style.transform = 'translateY(0)';
       }
     }
   });
